@@ -1,0 +1,8 @@
+node_modules
+dist
+dev-dist
+coverage
+.git
+*.log
+# Real eAMA exports never go into the image
+*.xml
