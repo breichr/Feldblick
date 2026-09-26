@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dev-dist/
+coverage/
+*.log
+.DS_Store
+
+# Echte eAMA-Exporte niemals committen (nur anonymisierte Fixtures)
+*.xml
+!test/fixtures/**/*.xml
