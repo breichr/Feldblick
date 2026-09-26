@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de-AT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#2f5d2a" />
+    <meta name="description" content="Feldstücke und Schläge aus dem eAMA-Export als Karte und Liste" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <title>Feldblick</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Feldblick</h1>
+      <select id="import-select" aria-label="Import auswählen" hidden></select>
+      <button id="import-button" class="btn btn-primary">Import</button>
+    </header>
+
+    <main id="main">
+      <section id="empty" class="empty" hidden>
+        <h2>Noch keine Daten</h2>
+        <p>
+          Importiere die Feldstücksliste aus eAMA (XML-Export des Mehrfachantrags).
+          Die Daten bleiben auf diesem Gerät.
+        </p>
+        <button id="empty-import" class="btn btn-primary btn-large">XML-Datei auswählen</button>
+        <p class="hint">oder die Datei hierher ziehen</p>
+      </section>
+      <section id="view-map" class="view" data-view="map" hidden></section>
+      <section id="view-list" class="view scroll" data-view="list" hidden></section>
+      <section id="view-summary" class="view scroll" data-view="summary" hidden></section>
+    </main>
+
+    <nav id="tabbar" class="tabbar" hidden>
+      <button data-tab="map" aria-current="page">Karte</button>
+      <button data-tab="list">Liste</button>
+      <button data-tab="summary">Summen</button>
+    </nav>
+
+    <aside id="details" class="sheet" hidden aria-live="polite"></aside>
+    <div class="drop-overlay" aria-hidden="true">XML-Datei hier ablegen</div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
